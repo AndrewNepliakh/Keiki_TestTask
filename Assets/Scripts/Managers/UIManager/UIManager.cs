@@ -1,15 +1,20 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 namespace Managers
 {
-    public class UIManager : MonoBehaviour, IUIManager
+    public class UIManager : IUIManager
     {
-        [SerializeField] private Transform _mainCanvas;
-
+        [Inject] private DiContainer _diContainer;
+        private Transform _mainCanvas;
         private readonly Dictionary<Type,Window> _windows = new Dictionary<Type,Window>();
+
+        public void Init(Transform mainCanvas)
+        {
+            _mainCanvas = mainCanvas;
+        }
 
         public T ShowWindow<T>(string prefabPath, WindowArgument args) where T : Window
         {
@@ -21,7 +26,7 @@ namespace Managers
             }
 
             var windowPrefab = Resources.Load<Window>(prefabPath);
-            var newWindow = Instantiate(windowPrefab, _mainCanvas) as T;
+            var newWindow = _diContainer.InstantiatePrefab(windowPrefab, _mainCanvas).GetComponent<T>();
             if(args != null) newWindow.Show(args);
             _windows.Add(typeof(T), newWindow);
             return newWindow;

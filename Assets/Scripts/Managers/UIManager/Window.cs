@@ -10,14 +10,7 @@ namespace Managers
     public abstract class Window : MonoBehaviour, IWindow
     {
         public Action OnClose { get; set; }
-        public void Show(WindowArgument args)
-        {
-          
-        }
-
-        public void Close()
-        {
-           
-        }
+        public abstract void Show(WindowArgument args);
+        public abstract void Close();
     }
 }

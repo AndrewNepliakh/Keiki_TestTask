@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f173db7174d342539f70c3744f5fe3f8, type: 3}
+  m_Name: LevelIconsData
+  m_EditorClassIdentifier: 
+  levelIconPrefab: {fileID: 7172104748601379063, guid: 4666c504baf9c4114adee753ec0f64a3,
+    type: 3}
+  tailIconPrefab: {fileID: 3651279311169252345, guid: 75a6d8cd7fede4a828de681439660bc4,
+    type: 3}
+  levelIconModels:
+  - type: 0
+    sprite: {fileID: 21300000, guid: 90a6e1ca7910d4445b97307583d0f014, type: 3}
+    tailSprite: {fileID: 0}
+  - type: 1
+    sprite: {fileID: 21300000, guid: 8e4dee2bfb572493bb849ca438c57314, type: 3}
+    tailSprite: {fileID: 0}
+  - type: 2
+    sprite: {fileID: 21300000, guid: a18c9cda684e747d3bd7f27d1aa5a4ea, type: 3}
+    tailSprite: {fileID: 0}
+  - type: 3
+    sprite: {fileID: 21300000, guid: e376b723627e44d498afaef204d02256, type: 3}
+    tailSprite: {fileID: 0}
+  - type: 4
+    sprite: {fileID: 21300000, guid: ef9d951e1adfa4c1cb042350bb93c953, type: 3}
+    tailSprite: {fileID: 0}
+  - type: 5
+    sprite: {fileID: 21300000, guid: 795525b04a8fa458387ef2d15024be39, type: 3}
+    tailSprite: {fileID: 0}

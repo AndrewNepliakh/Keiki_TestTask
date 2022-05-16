@@ -8,6 +8,7 @@ namespace Managers
     public class InitialState : IState
     {
         private IUserManager _userManager;
+        private IStateManager _stateManager;
 
         public InitialState(IUserManager userManager)
         {

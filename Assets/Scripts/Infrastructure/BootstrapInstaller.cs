@@ -9,6 +9,7 @@ namespace Infrastructure
         {
             Container.Bind<IStateManager>().To<StateManager>().AsSingle();
             Container.Bind<IUserManager>().To<UserManager>().AsSingle();
+            Container.Bind<IUIManager>().To<UIManager>().AsSingle();
         }
     }
     
